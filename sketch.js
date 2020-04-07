@@ -1,9 +1,22 @@
+const Engine = Matter.Engine;
+const World= Matter.World;
+const Bodies = Matter.Bodies;
+const Constraint = Matter.Constraint;
+
+var engine, world;
+
 function setup() {
-  createCanvas(800,400);
-  createSprite(400, 200, 50, 50);
+  var canvas = createCanvas(400,400);
+  engine = Engine.create();
+  world = engine.world;
+
+  bob = new Circle(200,150,70,30);
 }
 
 function draw() {
-  background(255,255,255);  
-  drawSprites();
+  Engine.update(engine);
+  background(205);  
+
+  bob.display();
+  
 }
