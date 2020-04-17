@@ -10,7 +10,9 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-  bob = new Circle(200,150,70,30);
+  bob = new Circle(200,250,70);
+  rects = new Rectangle(200,150,200,15);
+  chain = new Chain(bob.body,rects.body);
 }
 
 function draw() {
@@ -18,5 +20,14 @@ function draw() {
   background(205);  
 
   bob.display();
-  
+  rects.display();
+  chain.display();
+
+   keyPressed();
+}
+
+function KeyPressed(){
+  if(keyCode === 32){
+   move();
+  }
 }
