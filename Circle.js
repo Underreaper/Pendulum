@@ -10,7 +10,7 @@ class Circle {
     }
     
     move(){
-        this.body.position.x = mouseX
+        this.body.position.x = mouseX; this.body.position.y = mouseY;    
        }
 
     display(){

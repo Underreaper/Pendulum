@@ -23,11 +23,11 @@ function draw() {
   rects.display();
   chain.display();
 
-   keyPressed();
-}
-
-function KeyPressed(){
   if(keyCode === 32){
-   move();
+    bob.move();
+  } 
+  else if(keyCode === ENTER){
+    bob.x = 200;
   }
 }
+
